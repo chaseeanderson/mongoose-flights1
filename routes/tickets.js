@@ -8,7 +8,6 @@ router.get('/flights/:id/tickets/new', ticketsCtrl.new);
 router.post('/flights/:id', ticketsCtrl.create);
 // PUT req to update the new ticket data
 router.put('/tickets/:id', ticketsCtrl.update);
-// DELETE to delete the ticket 
-router.delete('/tickets/:id', ticketsCtrl.delete);
+
 
 module.exports = router; 

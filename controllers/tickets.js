@@ -5,7 +5,6 @@ module.exports = {
   new: newTicket,
   create,
   update,
-  delete: deleteTicket
 }
 
 function newTicket (req, res) {
@@ -32,8 +31,3 @@ function update (req, res) {
   })
 }
 
-function deleteTicket(req, res) {
-  Ticket.findByIdAndDelete(req.params.id, function(err, deletedTicket) {
-    res.redirect(`/flights/${deletedTicket.flight}`);
-  });
-}
